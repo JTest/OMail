@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="30dp"
+    android:orientation="vertical" >
+	<TextView
+	 	android:id="@+id/label1"
+	 	android:layout_width="fill_parent"
+	 	android:layout_height="wrap_content"
+	 	android:text="@string/acount_label"/> 
+
+	<EditText
+	    android:id="@+id/acount_entry"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/label1"
+	    android:background="@android:drawable/editbox_background" />
+
+	<TextView
+	 	android:id="@+id/label2"
+	 	android:layout_width="fill_parent"
+	 	android:layout_height="wrap_content"
+	 	android:text="@string/passwd_label"
+	 	android:layout_below="@id/acount_entry"/>
+	
+	<EditText
+	 	android:id="@+id/passwd_entry"
+	 	android:layout_width="fill_parent"
+	 	android:layout_height="wrap_content"
+	 	android:background="@android:drawable/editbox_background"
+	 	android:layout_below="@id/label2"/>
+
+	<Button
+	    android:id="@+id/login_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="40dp"
+	    android:layout_alignRight="@+id/passwd_entry"
+	    android:layout_below="@+id/passwd_entry"
+	    android:layout_marginTop="15dp"
+	    android:text="登录" />
+	
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, OMailTestActivity!</string>
+    <string name="app_name">OMailTest</string>
+    <string name="acount_label">帐号</string>
+    <string name="passwd_label">密码</string>
+
+    <string name="about_text">\
+      OMail是一个基于Android\n
+       平台的邮件客户端。\n\n
+       作者：李文祥、李锡波\n
+       李亦乔、丁卫涛、潘振华\n\n
+       时间：2011年12月</string>
+</resources>
