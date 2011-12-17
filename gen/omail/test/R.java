@@ -32,7 +32,10 @@ public final class R {
         public static final int label2=0x7f070003;
         public static final int login_button=0x7f070005;
         public static final int menu_about=0x7f070008;
+        public static final int menu_exit=0x7f07000b;
         public static final int menu_help=0x7f070007;
+        public static final int menu_logout=0x7f07000a;
+        public static final int menu_search=0x7f070009;
         public static final int menu_setting=0x7f070006;
         public static final int passwd_entry=0x7f070004;
     }
@@ -43,6 +46,7 @@ public final class R {
     }
     public static final class menu {
         public static final int login_menu=0x7f060000;
+        public static final int main_menu=0x7f060001;
     }
     public static final class string {
         public static final int about_text=0x7f050004;

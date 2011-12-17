@@ -30,10 +30,12 @@ public class OMailTestActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch(item.getItemId()){
-		/*case R.id.menu_setting:
+		case R.id.menu_setting:
+			startActivity(new Intent(this, Setting_1.class));
 			return true;
 		case R.id.menu_help:
-			return true;*/
+			startActivity(new Intent(this, Help.class));
+			return true;
 		case R.id.menu_about:
 			startActivity(new Intent(this, About.class));
 			return true;

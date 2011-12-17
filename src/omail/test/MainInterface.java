@@ -8,6 +8,9 @@ import omail.test.SendMail;
 import omail.test.MailBox;
 import omail.test.Dustbin;
 import omail.test.R;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TabHost;
 
 public class MainInterface extends TabActivity{
@@ -23,25 +26,49 @@ public class MainInterface extends TabActivity{
 
 	    
 	    intent = new Intent().setClass(this, SendMail.class);
-	    spec = tabHost.newTabSpec("sendmail").setIndicator("发邮件",
+	    spec = tabHost.newTabSpec("sendmail").setIndicator("SendMail",
 	                      res.getDrawable(R.drawable.send_mail_tab))
 	                  .setContent(intent);
 	    
 	    tabHost.addTab(spec);
 	    intent = new Intent().setClass(this, MailBox.class);
-	    spec = tabHost.newTabSpec("mailbox").setIndicator("收件箱",
+	    spec = tabHost.newTabSpec("mailbox").setIndicator("MailBox",
 	                      res.getDrawable(R.drawable.mail_box_tab))
 	                  .setContent(intent);
 	    
 	    tabHost.addTab(spec);
 	    intent = new Intent().setClass(this, Dustbin.class);
-	    spec = tabHost.newTabSpec("dustbin").setIndicator("垃圾箱",
+	    spec = tabHost.newTabSpec("dustbin").setIndicator("Dustbin",
 	                      res.getDrawable(R.drawable.dustbin_tab))
 	                  .setContent(intent);
 
 	    tabHost.addTab(spec);
 	   
 	    tabHost.setCurrentTab(1);
-	}	
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		super.onCreateOptionsMenu(menu);
+		MenuInflater inflater=getMenuInflater();
+		inflater.inflate(R.menu.main_menu, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch(item.getItemId()){
+		case R.id.menu_search:
+			//startActivity(new Intent(this, Setting_1.class));
+			return true;
+		case R.id.menu_logout:
+			//startActivity(new Intent(this, Help.class));
+			return true;
+		case R.id.menu_exit:
+			finish();
+			return true;
+		}
+		return false;
+	}
 	
 }

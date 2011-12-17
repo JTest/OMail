@@ -30,6 +30,10 @@
             android:name=".MailBox"></activity>
         <activity
             android:name=".Dustbin"></activity>
+        <activity
+            android:name=".Setting_1"></activity>
+        <activity
+            android:name=".Help"></activity>
     </application>
 
 </manifest>
