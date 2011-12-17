@@ -23,19 +23,19 @@ public class MainInterface extends TabActivity{
 
 	    
 	    intent = new Intent().setClass(this, SendMail.class);
-	    spec = tabHost.newTabSpec("sendmail").setIndicator("å‘é‚®ä»¶",
+	    spec = tabHost.newTabSpec("sendmail").setIndicator("·¢ÓÊ¼ş",
 	                      res.getDrawable(R.drawable.send_mail_tab))
 	                  .setContent(intent);
 	    
 	    tabHost.addTab(spec);
 	    intent = new Intent().setClass(this, MailBox.class);
-	    spec = tabHost.newTabSpec("mailbox").setIndicator("æ”¶ä»¶ç®±",
+	    spec = tabHost.newTabSpec("mailbox").setIndicator("ÊÕ¼şÏä",
 	                      res.getDrawable(R.drawable.mail_box_tab))
 	                  .setContent(intent);
 	    
 	    tabHost.addTab(spec);
 	    intent = new Intent().setClass(this, Dustbin.class);
-	    spec = tabHost.newTabSpec("dustbin").setIndicator("åƒåœ¾ç®±",
+	    spec = tabHost.newTabSpec("dustbin").setIndicator("À¬»øÏä",
 	                      res.getDrawable(R.drawable.dustbin_tab))
 	                  .setContent(intent);
 
