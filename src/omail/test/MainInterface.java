@@ -2,6 +2,7 @@ package omail.test;
 
 import android.app.TabActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import omail.test.SendMail;
@@ -14,6 +15,8 @@ import android.view.MenuItem;
 import android.widget.TabHost;
 
 public class MainInterface extends TabActivity{
+	public	SharedPreferences preferences;
+	public SharedPreferences.Editor editor;
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -62,6 +65,12 @@ public class MainInterface extends TabActivity{
 			//startActivity(new Intent(this, Setting_1.class));
 			return true;
 		case R.id.menu_logout:
+		 	preferences=getSharedPreferences("account", MODE_WORLD_READABLE);
+	    	editor=preferences.edit();
+			editor.putString("address", null);
+	    	editor.putString("passwd", null);
+	    	editor.commit();
+	    	finish();
 			//startActivity(new Intent(this, Help.class));
 			return true;
 		case R.id.menu_exit:
@@ -70,5 +79,4 @@ public class MainInterface extends TabActivity{
 		}
 		return false;
 	}
-	
 }

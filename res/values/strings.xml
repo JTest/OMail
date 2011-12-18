@@ -5,6 +5,9 @@
     <string name="app_name">OMailTest</string>
     <string name="acount_label">帐号</string>
     <string name="passwd_label">密码</string>
+    <string name="send_direction">收件人</string>
+    <string name="send_topic">主题</string>
+    <string name="send_content">内容</string>
 
     <string name="about_text">\
       OMail是一个基于Android\n
